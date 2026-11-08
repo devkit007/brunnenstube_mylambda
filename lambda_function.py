@@ -1,11 +1,15 @@
+import os
 import json
 import boto3
 import time
 from decimal import Decimal
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('pumproom_data')
-table2 = dynamodb.Table('pumproom_latest')
+
+# Holt die Tabelle aus den Umgebungsvariablen. Wenn keine definiert ist, 
+# wird standardmäßig die echte Tabelle ('pumproom_data') genommen.
+table = dynamodb.Table(os.environ.get('DATA_TABLE', 'pumproom_data'))
+table2 = dynamodb.Table(os.environ.get('LATEST_TABLE', 'pumproom_latest'))
 
 def to_decimal(v):
     if v is None:

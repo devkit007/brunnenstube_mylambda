@@ -1,0 +1,16 @@
+{
+  "device_id": "SPS_Pumproom_01",
+  "timestamp": 1794152655,
+  "uptime": 3600,
+  "temp_primary_supply": 45.2,
+  "temp_primary_return": 39.8,
+  "temp_secondary_supply": 42.1,
+  "temp_secondary_return": 35.5,
+  "temp_heat_exchanger": 40.2,
+  "temp_room": 18.5,
+  "pressure_secondary": 2.4,
+  "flow_secondary_lps": 1.25,
+  "well_level_cm": 85.0,
+  "pump_setpoint_percent": 75,
+  "alarm_lamp_state": 0
+}
